@@ -8,7 +8,8 @@ function go(page, nextMode = mode) {
   if (location.hash !== nextHash) location.hash = nextHash;
   render();
 }
-function pageAsset(p) { return p.asset; }
+function assetURL(path) { return path + '?v=' + encodeURIComponent(book.assetVersion || 'original'); }
+function pageAsset(p) { return assetURL(p.asset); }
 function imageNode(p, priority = false) {
   const frame = document.createElement('div'); frame.className = 'page-frame';
   const img = document.createElement('img'); img.className = 'page-image'; img.alt = p.alt;
@@ -21,7 +22,7 @@ function imageNode(p, priority = false) {
   state.append(retry);
   img.onload = () => { state.hidden = true; };
   img.onerror = () => { state.hidden = false; message.textContent = '這一頁暫時無法載入，文字版仍可閱讀。'; retry.hidden = false; };
-  retry.onclick = () => { message.textContent = '漫畫載入中…'; retry.hidden = true; img.src = pageAsset(p) + '?retry=' + Date.now(); };
+  retry.onclick = () => { message.textContent = '漫畫載入中…'; retry.hidden = true; img.src = pageAsset(p) + '&retry=' + Date.now(); };
   img.src = pageAsset(p); frame.append(img, state); return frame;
 }
 function article(p, priority) {
@@ -65,7 +66,7 @@ function render() {
 function openDrawer() { $('drawer').showModal(); }
 async function init() {
   try {
-    const response = await fetch('manifest.json'); if (!response.ok) throw new Error('Manifest unavailable');
+    const response = await fetch('manifest.json?v=webp-q50-20261005'); if (!response.ok) throw new Error('Manifest unavailable');
     book = await response.json();
     if (!Array.isArray(book.pages) || book.pages.length !== 10 || book.pages.some(p => !p.asset || !p.alt)) throw new Error('Incomplete manga');
     $('brand-title').textContent = book.title; $('book-title').textContent = book.title;
@@ -73,12 +74,12 @@ async function init() {
     document.querySelector('meta[name=description]').content = book.description;
     $('cover-image').onerror = () => { $('cover-error').hidden = false; };
     $('cover-image').onload = () => { $('cover-error').hidden = true; };
-    $('retry-cover').onclick = () => { $('cover-error').hidden = true; $('cover-image').src = (book.cover || book.pages[0].asset) + '?retry=' + Date.now(); };
-    $('cover-image').src = book.cover || book.pages[0].asset;
+    $('retry-cover').onclick = () => { $('cover-error').hidden = true; $('cover-image').src = assetURL(book.cover || book.pages[0].asset) + '&retry=' + Date.now(); };
+    $('cover-image').src = assetURL(book.cover || book.pages[0].asset);
     $('cover-image').alt = `${book.title}，第 1 頁封面預覽`;
     book.pages.forEach(p => {
       const b = document.createElement('button'); b.className = 'thumbnail'; b.setAttribute('aria-label', `閱讀第 ${p.number} 頁：${p.title}`);
-      const img = document.createElement('img'); img.src = p.thumbnail || p.asset; img.alt = ''; img.loading = 'lazy'; img.width = 160; img.height = 240;
+      const img = document.createElement('img'); img.src = assetURL(p.thumbnail || p.asset); img.alt = ''; img.loading = 'lazy'; img.width = 160; img.height = 240;
       const label = document.createElement('span'); label.textContent = `${pad(p.number)}　${p.title}`;
       b.append(img,label); b.onclick = () => { $('drawer').close(); go(p.number); }; $('thumbnails').append(b);
     });

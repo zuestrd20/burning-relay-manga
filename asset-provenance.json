@@ -1,14 +1,14 @@
 {
   "work": "逆風最後一棒",
   "origin": "Original story and characters; AI-generated manga artwork; no third-party manga artwork.",
-  "processing": "Complete page images converted to WebP at original dimensions, without cropping. Original PNG paths refer to the source ZIP archive, not files hosted on this website.",
+  "processing": "Complete page images and thumbnails encoded as WebP with quality 50. Full pages preserve original dimensions; thumbnails preserve their existing dimensions. No cropping. Original PNG paths refer to the source ZIP archive, not files hosted on this website.",
   "pages": [
     {
       "page": 1,
       "sourceArchiveOriginal": "originals/page-01.png",
       "originalSHA256": "ad07b55f427c130de3ff28ce4f2615a577d48a0c2b0b530c67cbe55d36f1f222",
       "runtime": "assets/page-01.webp",
-      "runtimeSHA256": "b35bf2557c8bbc8000b23637b06439e97c427fb4ff0c1bf1f3e055584b32ad9c",
+      "runtimeSHA256": "542f1a8e372e05481732894b3185812670971fb91a62d8b54c5d620faef5830e",
       "width": 1024,
       "height": 1536
     },
@@ -17,7 +17,7 @@
       "sourceArchiveOriginal": "originals/page-02.png",
       "originalSHA256": "3a12a9c8d5f34065b800c7d76a19b4a99657188e4efa8fdf7b3163fb91d7ee6c",
       "runtime": "assets/page-02.webp",
-      "runtimeSHA256": "b09966f53cb874b5cab43061f233e6acb5b3ef319c433270ca28c3f715b704ae",
+      "runtimeSHA256": "9450feb9aa9416228bc6dd4d1d864499909ba7b5b24cb2c6e8c534db6a3adb31",
       "width": 1024,
       "height": 1536
     },
@@ -26,7 +26,7 @@
       "sourceArchiveOriginal": "originals/page-03.png",
       "originalSHA256": "cf05704739492db4ae24ffad847356600a8b52b1b08a18b356c7a7cdcfce179b",
       "runtime": "assets/page-03.webp",
-      "runtimeSHA256": "a34c2d52579a1711e328927fc74f8bf09b671a0373ef430c1f55a0c1a2f912cc",
+      "runtimeSHA256": "c0952d92f3b8dcfb0d684204df9709d2342b8d491fd758c2ccf2cd53069f59cb",
       "width": 1024,
       "height": 1536
     },
@@ -35,7 +35,7 @@
       "sourceArchiveOriginal": "originals/page-04.png",
       "originalSHA256": "66d143d096aaaef882d214f0cf1b1624c176e0cc9cce138cd035035f46a039c2",
       "runtime": "assets/page-04.webp",
-      "runtimeSHA256": "a364dba52143c186a36f8cfa63dd2020432c2a919686828a3f719f7173137d6a",
+      "runtimeSHA256": "ea0064c0f168f4709c1db2b34f2a26be6e20469238a5cb8f54d6fdd110a90a53",
       "width": 1024,
       "height": 1536
     },
@@ -44,7 +44,7 @@
       "sourceArchiveOriginal": "originals/page-05.png",
       "originalSHA256": "dd20902dde8b48e096150936e1d3981e18e50683e74a4d8cf03f5ac998d21baa",
       "runtime": "assets/page-05.webp",
-      "runtimeSHA256": "f2b94d1f3468278c784f6e6cac0159cbe1a74afc2adc5fb56fd5c378e00b27c7",
+      "runtimeSHA256": "4df50de815a4b44d90fac009ab74849be3fc08bbc73129cdf2f6d5b022fb783a",
       "width": 1024,
       "height": 1536
     },
@@ -53,7 +53,7 @@
       "sourceArchiveOriginal": "originals/page-06.png",
       "originalSHA256": "ca8678eff0486243cb86c28e099a0966505e4472e7f56cf28cf47d3b0cd6fa77",
       "runtime": "assets/page-06.webp",
-      "runtimeSHA256": "ccb778123d27413119a8a85116a40fa2f3d1d9cf27865cf9a3c705daa7674d46",
+      "runtimeSHA256": "824f42577b63e4c07c2ae1dc6cc1e3d552d7f9a242bb55479806b90ca03af2c6",
       "width": 1024,
       "height": 1536
     },
@@ -62,7 +62,7 @@
       "sourceArchiveOriginal": "originals/page-07.png",
       "originalSHA256": "cccb8be0e15cc20835276b3dde4bd44c752771939a0e55477259086a52b3aedd",
       "runtime": "assets/page-07.webp",
-      "runtimeSHA256": "2e19edb439e6ad275ffcce836a719380365800c1a8806d55e117ef5179c145e6",
+      "runtimeSHA256": "71c9eb47eee88bcd2f04e5470d503d59890f96dd1303c5a08d76c5b07a6f6e7e",
       "width": 1024,
       "height": 1536
     },
@@ -71,7 +71,7 @@
       "sourceArchiveOriginal": "originals/page-08.png",
       "originalSHA256": "63499e29214d669d458876894921e360cd92be490652cb48b9f7da41293b0edf",
       "runtime": "assets/page-08.webp",
-      "runtimeSHA256": "3724cd52bdf42a3bdd2a8a402b4ca95f10b60954ad2bc78563d0b76d5a304fa4",
+      "runtimeSHA256": "3223f035810d71f384f6b7626f104718cd616f27a0431c08fa64e961155ab375",
       "width": 1024,
       "height": 1536
     },
@@ -80,7 +80,7 @@
       "sourceArchiveOriginal": "originals/page-09.png",
       "originalSHA256": "0606564d489179b5cc3486d30f7a84b66dd869bde2ffa6e68dd5d6a715c2c2d8",
       "runtime": "assets/page-09.webp",
-      "runtimeSHA256": "01e1db62d636661f71e1cbf4d13ae53b2cff5a18ebc8469b8b961939775c1a0e",
+      "runtimeSHA256": "27d9786dbc9134766ce1c40f6144e4dba0fc9980ad8d43cbff8e9577c25dffb6",
       "width": 1024,
       "height": 1536
     },
@@ -89,7 +89,7 @@
       "sourceArchiveOriginal": "originals/page-10.png",
       "originalSHA256": "0026900ad8a04e0e3da58b70a0052100b77c2120168d116b2a8dfa1b8a91d030",
       "runtime": "assets/page-10.webp",
-      "runtimeSHA256": "a5ef270c2b466497a2a6a3166ba82290da89d631d69755515c5a75c0f28704d1",
+      "runtimeSHA256": "663087169c3ca2676fdc78e7924efae8b56aa35b9bb9e9921d3f7491f1081b9d",
       "width": 1024,
       "height": 1536
     }

@@ -233,5 +233,11 @@
       "thumbnail": "assets/thumb-10.webp"
     }
   ],
-  "cover": "assets/page-01.webp"
+  "cover": "assets/page-01.webp",
+  "assetVersion": "webp-q50-20261005",
+  "imageEncoding": {
+    "format": "WebP",
+    "quality": 50,
+    "dimensionsPreserved": true
+  }
 }
