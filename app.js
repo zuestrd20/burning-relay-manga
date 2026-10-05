@@ -5,7 +5,8 @@ const pad = n => String(n).padStart(2, '0');
 function announce(text) { $('status').textContent = text; }
 function go(page, nextMode = mode) {
   const nextHash = page ? `#page=${Math.max(1, Math.min(book.pages.length, page))}&mode=${nextMode}` : '';
-  if (location.hash === nextHash) render(); else location.hash = nextHash;
+  if (location.hash !== nextHash) location.hash = nextHash;
+  render();
 }
 function pageAsset(p) { return p.asset; }
 function imageNode(p, priority = false) {
